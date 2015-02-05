@@ -69,7 +69,7 @@ header {
   padding: 0 1em;
   position: relative;
   padding-top: 2em;
-  padding-bottom: 30em;
+  padding-bottom: 23em;
 
   background: url("../img/kids.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -99,7 +99,7 @@ h1{
   color: $teal;
   margin-left: 0.25em;
   display: inline;
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 
 h2{
@@ -107,7 +107,9 @@ h2{
   font-family: $open;
   font-weight: 400;
   font-size: 1.5em;
+  text-shadow: 2px 2px rgba(0,0,0,.5);
 }
+
 
 .header-text{
   width: 50%;
@@ -135,7 +137,7 @@ h2{
 .btn-donate{
   @include button($teal-light, $teal-dark, $teal-light);
   float: right;
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: 700;
   margin-right: 0.5em;
   padding: 0.35em;
@@ -158,6 +160,7 @@ h2{
       font-size: 1.5em;
       &:hover{
         color: $teal-dark;
+        font-weight: 700;
       }
     }
     }//li
@@ -222,17 +225,52 @@ h2{
 
 @media only screen and (min-width: 40em){
 
-  .sliding-canvas{
-    width: 50%;
+  h1{
+    font-size: 1.8em;
   }
 
-    .slide-menu{
-      position: absolute;
-      width: 50%;
+  .btn-donate{
+  font-size: 1.2em;
+}
+
+i{
+  font-size: 1.5em;
+}
+
+.site-wrapper{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 99;
+
+    .sliding-canvas{
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateX(0);
+      @include ease(all, 200ms, ease-in);
+    }//canvas
+
+    &[data-state="slide-open"] .sliding-canvas{
+      transform: translateX(-50%);
     }
 
+    &[data-state="slide-open"]{
+      //allows nav to have a scroll bar when open
+      overflow: visible;
+    }
 
+  }//sitewrapper
 
+.slide-menu{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  min-height: 600px;
+}
 } //media query medium screen
 
 
