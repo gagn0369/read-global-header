@@ -87,7 +87,7 @@ html:before, html:after, body:before, body:after {
   background: #00A5B9;
   position: fixed;
   display: block;
-  z-index: 5; }
+  z-index: 100; }
 
 /* line 30, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 html:before {
@@ -136,15 +136,16 @@ header {
   background-size: cover;
   border-left: solid 10px #00A5B9;
   border-right: solid 10px #00A5B9;
-  border-top: solid 10px #00A5B9; }
+  border-top: solid 10px #00A5B9;
+  z-index: -99; }
 
-/* line 85, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 87, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 main {
   border-left: solid 10px #00A5B9;
   border-right: solid 10px #00A5B9;
   padding: 1em; }
 
-/* line 94, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 96, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 h1 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -153,35 +154,35 @@ h1 {
   display: inline;
   font-size: 1.8em; }
 
-/* line 103, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 105, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 h2 {
   color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 1.5em; }
 
-/* line 110, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 112, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 .header-text {
   width: 50%;
   margin-top: 3em; }
 
-/* line 115, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 117, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 .fat {
   font-weight: 700; }
 
-/* line 119, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 121, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 .toggle-btn {
   float: right;
   margin-right: 0.5em;
   margin-top: 0.5em; }
 
-/* line 126, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 128, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 .close-btn {
   float: right;
   clear: both;
   margin-top: 2em; }
 
-/* line 133, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 135, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 .btn-donate {
   border: solid 3px #00A5B9;
   color: #00A5B9;
@@ -198,58 +199,57 @@ h2 {
     border: solid 3px #007d91;
     color: #007d91; }
 
-/* line 142, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 144, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 .navigation ul {
   margin: 0;
   padding: 0;
   clear: both; }
-  /* line 145, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+  /* line 147, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
   .navigation ul li {
     list-style-type: none;
     display: block;
     padding: 0.5em 0.75em;
     text-align: center;
     position: relative; }
-    /* line 151, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+    /* line 153, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
     .navigation ul li a {
       text-decoration: none;
       font-family: 'Open Sans', sans-serif;
       color: #00A5B9;
       font-weight: 300;
-      font-size: 1em; }
-      /* line 157, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+      font-size: 1.5em; }
+      /* line 159, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
       .navigation ul li a:hover {
         color: #007d91; }
 
-/* line 165, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 167, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 .toggle-btn, .close-btn {
   color: #00A5B9;
   height: 40px;
   width: 40px; }
-  /* line 169, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+  /* line 171, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
   .toggle-btn span, .close-btn span {
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
     display: block; }
-  /* line 172, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+  /* line 174, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
   .toggle-btn i, .close-btn i {
-    padding: 0.5em;
-    border: 3px solid #00A5B9; }
-    /* line 175, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+    padding: 0.5em; }
+    /* line 176, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
     .toggle-btn i:hover, .close-btn i:hover {
       color: #007d91; }
-  /* line 179, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+  /* line 180, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
   .toggle-btn:hover, .close-btn:hover {
     color: #007d91; }
 
-/* line 185, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 186, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 .site-wrapper {
   position: relative;
   overflow: hidden;
   width: 100%;
-  z-index: 100; }
-  /* line 191, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+  z-index: 99; }
+  /* line 192, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
   .site-wrapper .sliding-canvas {
     width: 100%;
     height: 100%;
@@ -258,16 +258,16 @@ h2 {
         -ms-transform: translateX(0);
             transform: translateX(0);
     transition: all 200ms ease-in; }
-  /* line 199, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+  /* line 200, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
   .site-wrapper[data-state="slide-open"] .sliding-canvas {
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%); }
-  /* line 203, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+  /* line 204, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
   .site-wrapper[data-state="slide-open"] {
     overflow: visible; }
 
-/* line 210, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 211, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 .slide-menu {
   position: absolute;
   width: 100%;
@@ -278,44 +278,17 @@ h2 {
   min-height: 600px; }
 
 @media only screen and (min-width: 40em) {
-  /* line 224, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
-  .site-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    z-index: 100; }
-    /* line 230, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
-    .site-wrapper .sliding-canvas {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      -webkit-transform: translateX(0);
-          -ms-transform: translateX(0);
-              transform: translateX(0);
-      transition: all 300ms ease-in-out; }
-    /* line 238, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
-    .site-wrapper[data-state="slide-open"] .sliding-canvas {
-      -webkit-transform: translateX(-100%);
-          -ms-transform: translateX(-100%);
-              transform: translateX(-100%); }
-    /* line 242, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
-    .site-wrapper[data-state="slide-open"] {
-      overflow: visible; }
+  /* line 225, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+  .sliding-canvas {
+    width: 50%; }
 
-  /* line 249, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+  /* line 229, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
   .slide-menu {
     position: absolute;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    right: -100%;
-    min-height: 250px;
-    background-color: rgba(0, 0, 0, 0.5);
-    float: right; }
+    width: 50%; }
  }
 
-/* line 267, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
+/* line 239, /Users/madeleinegagne/Desktop/read-global-header/scss/components/main */
 body.noscript .slide-menu {
   position: static;
   right: auto; }
