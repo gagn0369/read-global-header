@@ -65,8 +65,13 @@ body{
   }
 }
 
-main{
-    background: url("../img/kids.jpg") no-repeat center center fixed; 
+header {
+  padding: 0 1em;
+  position: relative;
+  padding-top: 2em;
+  padding-bottom: 30em;
+
+  background: url("../img/kids.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -74,13 +79,16 @@ main{
 
   border-left: solid 10px $teal-light;
   border-right: solid 10px $teal-light;
+  border-top: solid 10px $teal-light;
 }
 
-header {
-  padding: 0 1em;
-  position: relative;
-  margin-top: 2em;
-  margin-bottom: 2em;
+main{
+
+border-left: solid 10px $teal-light;
+border-right: solid 10px $teal-light;
+
+padding: 1em;
+  
 }
 
 h1{
@@ -89,6 +97,19 @@ h1{
   color: $teal;
   margin-left: 0.25em;
   display: inline;
+  font-size: 1.8em;
+}
+
+h2{
+  color: #fff;
+  font-family: $open;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.header-text{
+  width: 50%;
+  margin-top: 3em;
 }
 
 .fat{
@@ -105,7 +126,7 @@ h1{
 .close-btn{
   float: right;
   clear: both;
-  margin-right: 1em;
+  margin-top: 2em;
 
 }
 
@@ -131,7 +152,8 @@ h1{
       text-decoration: none;
       font-family:  $open;
       color: $teal-light;
-      font-size: 1.5em;
+      font-weight: 300;
+      font-size: 1em;
       &:hover{
         color: $teal-dark;
       }
