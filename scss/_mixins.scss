@@ -5,6 +5,19 @@
   padding: 0;
 }
 
+@mixin button($border-color, $hover-color, $text-color){
+  border: solid 3px $border-color;
+  color: $text-color;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+
+  &:hover{
+    border: solid 3px $hover-color;
+    color: $hover-color;
+  }
+}
+
 @mixin ease($transition-property, $transition-time, $method) {
     -webkit-transition: $transition-property $transition-time $method;
     -moz-transition: $transition-property $transition-time $method;
@@ -26,3 +39,4 @@
   white-space: normal;
   overflow: visible;
 }
+
