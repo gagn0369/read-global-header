@@ -1,0 +1,219 @@
+@-moz-viewport { width: device-width; scale: 1; }
+@-ms-viewport { width: device-width; scale: 1; }
+@-o-viewport { width: device-width; scale: 1; }
+@-webkit-viewport { width: device-width; scale: 1; }
+@viewport { width: device-width; scale: 1; }
+
+html {
+	box-sizing: border-box;
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+
+body{
+  font-family: sans-serif;
+  @include zero;
+  // Hides close button if there is no js
+  &.noscript .close-btn,
+  &.noscript .toggle-btn{
+    display: none;
+  }
+  background: url("../img/kids.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header {
+  padding: 0 1em;
+  position: relative;
+}
+
+h1{
+  font-family: $yanone;
+  font-weight: 300;
+  color: $brand-light;
+  margin-left: 0.25em;
+}
+
+.toggle-btn{
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+.close-btn{
+  top: 1em;
+  left: 0.5em;
+  position: relative;
+}
+
+.navigation ul{
+  @include zero;
+  li{
+    list-style-type: none;
+    display: block;
+    padding: 0.5em 0.75em;
+    text-align: center;
+    position: relative;
+    a{
+      text-decoration: none;
+      font-family:  $yanone;
+      color: $brand-light;
+      font-size: 1.5em;
+      &:hover{
+        color: $brand-dark;
+      }
+    }
+    }//li
+}//navigation
+
+.toggle-btn,
+.close-btn{
+  color: $brand-light;
+  height:40px;
+  width: 40px;
+  span{
+    @include hide-text;
+  }
+  i{
+    padding: 0.5em;
+    border: 3px solid $brand-light;
+    &:hover{
+      color: $brand-dark;
+    }
+  }
+  &:hover{
+    color: $brand-dark
+  }
+}
+
+
+@media only screen and (max-width: 60em){
+  .site-wrapper{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 100;
+
+      .sliding-canvas{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateX(0);
+        @include ease(all, 200ms, ease-in);
+      }//canvas
+
+      &[data-state="slide-open"] .sliding-canvas{
+        transform: translateX(-100%);
+      }
+
+      &[data-state="slide-open"]{
+        //allows nav to have a scroll bar when open
+        overflow: visible;
+      }
+
+    }//sitewrapper
+
+    .slide-menu{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      min-height: 600px;
+      background-color: rgba(0,0,0,.5);
+
+    }
+
+
+}//media
+
+//MEDIUM SCREEN STUFF
+
+@media only screen and (min-width: 40em){
+
+  @media only screen and (max-width: 60em){
+  .site-wrapper{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 100;
+
+      .sliding-canvas{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateX(0);
+        @include ease(all, 300ms, ease-in-out);
+      }//canvas
+
+      &[data-state="slide-open"] .sliding-canvas{
+        transform: translateX(-100%);
+      }
+
+      &[data-state="slide-open"]{
+        //allows nav to have a scroll bar when open
+        overflow: visible;
+      }
+
+    }//sitewrapper
+
+    .slide-menu{
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      right: -100%;
+      min-height: 250px;
+      background-color: rgba(0,0,0,.5);
+      float: right;
+
+    }
+
+
+  }//media
+
+} //media query medium screen
+
+
+//LARGE SCREEN STUFF 
+
+@media only screen and (min-width: 60em){
+  .toggle-btn,
+  .close-btn{
+    display: none;
+  }
+
+  .navigation ul{
+  li{
+    display: inline-block;
+    padding: 0.5em 0.5em;
+    a{
+      border-bottom: 1px solid $brand-light;
+    }
+    }//li
+  }//navigation
+
+
+
+}
+
+body.noscript .slide-menu{
+  position: static;
+  right: auto;
+}
+
+
+
